@@ -12,5 +12,5 @@ GSImageWithColor( UIColor *color, CGSize size )
     UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
 
-    return image,
+    return image;
 }
