@@ -102,9 +102,8 @@ iterator_png = glob.iglob(path.join(source, '*.png'))
 iterator_jpg = glob.iglob(path.join(source, '*.jpg'))
 
 def imerge(a, b):
-    for i, j in itertools.izip(a,b):
+    for i in itertools.chain(a,b):
         yield i
-        yield j
 
 all_files = {}
 
