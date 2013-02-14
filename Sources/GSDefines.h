@@ -10,3 +10,7 @@ do { \
 UIAlertView *_gsalert = [[UIAlertView alloc] initWithTitle:title message:msg delegate:nil cancelButtonTitle:cancel otherButtonTitles:nil]; \
 [_gsalert show]; \
 } while(0);
+
+#define GSIsIPad    (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
+#define GSIsIPhone  (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
+#define GSIsIPhoneWideScreen (GSIsIPhone && (fabs([[UIScreen mainScreen] bounds].size.height - 568.0f) < FLT_EPSILON))
