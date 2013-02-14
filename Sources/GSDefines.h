@@ -5,8 +5,8 @@
 #define GSMax(a, b)             (((a) > (b)) ? (a) : (b))
 #define GSMin(a, b)             (((a) < (b)) ? (a) : (b))
 
-#define GSAlert( title, message, cancel ) \
+#define GSAlert( title, msg, cancel ) \
 do { \
-UIAlertView *_gsalert = [[UIAlertView alloc] initWithTitle:title message:message delegate:nil cancelButtonTitle:cancel otherButtonTitles:nil]; \
+UIAlertView *_gsalert = [[UIAlertView alloc] initWithTitle:title message:msg delegate:nil cancelButtonTitle:cancel otherButtonTitles:nil]; \
 [_gsalert show]; \
 } while(0);
