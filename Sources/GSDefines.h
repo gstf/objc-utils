@@ -5,6 +5,10 @@
 #define GSMax(a, b)             (((a) > (b)) ? (a) : (b))
 #define GSMin(a, b)             (((a) < (b)) ? (a) : (b))
 
+#define GSColorFromRGB(rgb) [UIColor colorWithRed:((float)((rgb & 0xFF0000) >> 16))/255.0 green:((float)((rgb & 0xFF00) >> 8))/255.0 blue:((float)(rgb & 0xFF))/255.0 alpha:1.0]
+
+#define GSColorFromRGBA(rgb,a) [UIColor colorWithRed:((float)((rgb & 0xFF0000) >> 16))/255.0 green:((float)((rgb & 0xFF00) >> 8))/255.0 blue:((float)(rgb & 0xFF))/255.0 alpha:a]
+
 #define GSAlert( title, msg, cancel ) \
 do { \
 UIAlertView *_gsalert = [[UIAlertView alloc] initWithTitle:title message:msg delegate:nil cancelButtonTitle:cancel otherButtonTitles:nil]; \
